@@ -8,7 +8,7 @@ To send message from Linux machine to Telegram chennal with python:
 This is useful link:
 https://bogomolov.tech/Telegram-notification-on-SSH-login/
 https://linuxtech.in/how-to-send-alerts-and-notifications-with-telegram/
-
+This link from LOC: https://medium.com/linux-shots/setup-telegram-bot-to-get-alert-notifications-90be7da4444
 
 
 
