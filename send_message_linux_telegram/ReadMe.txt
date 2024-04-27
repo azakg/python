@@ -5,7 +5,9 @@ To send message from Linux machine to Telegram chennal with python:
 3.1) Change  <YourBOTToken> https://api.telegram.org/bot<YourBOTToken>/getUpdates
 3.2) But https://api.telegram.org/bot<YourBOTToken>/getUpdates  to Browser
 3.3) Send message into the chennel from your phone APP and you can get chennel ID there
-This is useful link https://bogomolov.tech/Telegram-notification-on-SSH-login/
+This is useful link:
+https://bogomolov.tech/Telegram-notification-on-SSH-login/
+https://linuxtech.in/how-to-send-alerts-and-notifications-with-telegram/
 
 
 
