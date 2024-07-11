@@ -11,3 +11,4 @@ print(motocycles)
 
 motocycles.insert(0, 'azamat')
 print()
+print()
