@@ -19,3 +19,7 @@ for value in range(1, 11):
 print(min(numbers1))
 print(max(numbers1))
 print(sum(numbers1))
+
+#Short version of the previous code
+squares = [value **2 for value in range(1, 11)]
+print(squares)
