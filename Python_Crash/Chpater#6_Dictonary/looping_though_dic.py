@@ -1,1 +1,3 @@
-user_0
+user_0 = {
+    'username': 'efermi',
+}
