@@ -47,7 +47,7 @@ def print_result2():
     print(f"Computer number is {sum1(computer)}")
     print("###################################################")
     if sum1(user) <= 21 and sum1(user) > sum1(computer) < 21:
-        print("You win!")
+        print("You win 😃")
     elif sum1(computer) <= 21 and sum1(computer) > sum1(user) < 21:
         print("Computer win!")
     elif sum1(user) > 21 and sum1(computer) > 21:
