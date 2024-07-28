@@ -1,5 +1,5 @@
 import random
-from text import logo
+from art import logo
 
 print(logo)
 
