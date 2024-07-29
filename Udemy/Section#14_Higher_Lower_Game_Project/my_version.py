@@ -6,8 +6,8 @@ from game_data import data
 # ask_and_check
 def ask():
     print(logo)
-    rand_a = random.randint(1, 50)
-    rand_b = random.randint(1, 50)
+    rand_a = random.randint(0, 49)
+    rand_b = random.randint(0, 49)
     print(f"Compare A: {data[rand_a]['name']}, a {data[rand_a]['description']}, from {data[rand_a]['country']}")
     print(vs)
     print(f"Compare B: {data[rand_b]['name']}, a {data[rand_b]['description']}, from {data[rand_b]['country']}")
@@ -18,9 +18,9 @@ def ask():
 
 def ask2(score):
     print(logo)
-    rand_a = random.randint(1, 50)
-    rand_b = random.randint(1, 50)
-    print(f"Your2 score is {score}")
+    rand_a = random.randint(0, 49)
+    rand_b = random.randint(0, 49)
+    print(f"You are right! Current score is: {score}.")
     print(f"Compare A: {data[rand_a]['name']}, a {data[rand_a]['description']}, from {data[rand_a]['country']}")
     print(vs)
     print(f"Compare B: {data[rand_b]['name']}, a {data[rand_b]['description']}, from {data[rand_b]['country']}")
@@ -61,4 +61,13 @@ def game():
             score += 1
             print(f"Your score is {score}")
 
-game()
+def game_loop():
+    play_answer = True
+    while play_answer:
+        play_answer = (input('Do you want to play "High/Low Game?" Type "Y" or "N" ')).lower()
+        if play_answer == 'y':
+            game()
+        else:
+            play_answer = False
+
+game_loop()
