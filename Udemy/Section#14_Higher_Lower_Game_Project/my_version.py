@@ -3,6 +3,7 @@ from art import vs
 import random
 from game_data import data
 
+
 # ask_and_check
 def ask():
     print(logo)
@@ -16,6 +17,7 @@ def ask():
     guess = input("Who has more followers? Type 'A' or 'B': ")
     return check(rand_a, rand_b, guess)
 
+
 def ask2(score):
     print(logo)
     rand_a = random.randint(0, 49)
@@ -28,6 +30,7 @@ def ask2(score):
     print(data[rand_b]['follower_count'])
     guess = input("Who has more followers? Type 'A' or 'B': ")
     return check(rand_a, rand_b, guess)
+
 
 # Check guess
 def check(rand_a, rand_b, guess):
@@ -43,6 +46,7 @@ def check(rand_a, rand_b, guess):
 
    else:
         return False
+
 
 def game():
     score = 0
@@ -61,13 +65,15 @@ def game():
             score += 1
             print(f"Your score is {score}")
 
+
 def game_loop():
     play_answer = True
     while play_answer:
-        play_answer = (input('Do you want to play "High/Low Game?" Type "Y" or "N" ')).lower()
+        play_answer = input('Do you want to play "High/Low Game?" Type "Y" or "N" ').lower()
         if play_answer == 'y':
             game()
         else:
             play_answer = False
+
 
 game_loop()
