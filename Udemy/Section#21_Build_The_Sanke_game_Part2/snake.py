@@ -1,4 +1,4 @@
-from turtle import Screen, Turtle
+from turtle import  Turtle
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
@@ -6,6 +6,7 @@ UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
+
 
 class Snake:
 
@@ -29,6 +30,21 @@ class Snake:
             self.segments[seg_num].goto(new_x, new_y)
         self.segments[0].forward(MOVE_DISTANCE)
 
+    def addSegment(self):
+        new_segment = Turtle(shape='square')
+        new_segment.penup()
+        new_segment.color('white')
+        new_x = self.segments[len(self.segments) - 1].xcor()
+        new_y = self.segments[len(self.segments) - 1].ycor()
+        new_segment.goto(new_x, new_y)
+        self.segments.append(new_segment)
+
+    # def gameOver(self):
+    #     new_x = self.segments[len(self.segments) - 1].xcor()
+    #     new_y = self.segments[len(self.segments) - 1].ycor()
+    #     if new_x or new_y >= 300 and new_y or new_x <= -300:
+    #         return True
+
 
     def up(self):
         if self.head.heading() != DOWN:
@@ -37,7 +53,6 @@ class Snake:
     def down(self):
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
-
 
     def left(self):
         if self.head.heading() != RIGHT:
