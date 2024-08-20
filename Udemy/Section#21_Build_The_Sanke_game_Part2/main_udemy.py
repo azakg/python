@@ -48,11 +48,13 @@ while game_is_on:
 
 
     #Detect_collision_with_body
-    # if snake.head.distance(snake.segments) < 15:
-    #     score.gameOverText()
-    #     break
+    for segment in snake.segments:
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            game_is_on = False
+            score.gameOverText()
 
-    #####
-    #Test Version
+
 
 screen.exitonclick()
