@@ -28,9 +28,7 @@ while game_is_on:
     screen.update()
     time.sleep(0.1)
     snake.move()
-    # if snake.gameOver():
-    #     score.gameOverText()
-    #     #break
+
 
     #Detect collision with food
     if snake.head.distance(food) < 15:
@@ -44,8 +42,14 @@ while game_is_on:
     if x >= 300 or x <= -300 and x >= 300 or x <= -300:
         score.gameOverText()
         break
+    if y >= 300 or y <= -300 and y >= 300 or y <= -300:
+        score.gameOverText()
+        break
+
 
     #Detect_collision_with_body
-
+    # if snake.head.distance(snake.segments) < 15:
+    #     score.gameOverText()
+    #     break
 
 screen.exitonclick()

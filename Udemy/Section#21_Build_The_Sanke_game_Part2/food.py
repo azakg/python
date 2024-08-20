@@ -9,7 +9,7 @@ class Food(Turtle):
         self.shape('circle')
         self.penup()
         self.color('red')
-        self.shapesize(0.5)
+        self.shapesize(0.7)
         self.speed('fastest')
         self.refresh()
 

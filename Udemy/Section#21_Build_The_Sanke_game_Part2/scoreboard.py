@@ -20,6 +20,7 @@ class Scoreboard(Turtle):
         self.hideturtle()
 
     def gameOverText(self):
-        self.clear()
+        self.goto(0, 0)
+        #self.clear()
         self.write(f"Game Over", align=ALIGNMENT, font=FONT)
         self.hideturtle()
