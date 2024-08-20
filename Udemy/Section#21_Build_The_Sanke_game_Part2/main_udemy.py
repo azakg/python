@@ -48,10 +48,10 @@ while game_is_on:
 
 
     #Detect_collision_with_body
-    for segment in snake.segments:
-        if segment == snake.head:
-            pass
-        elif snake.head.distance(segment) < 10:
+    for segment in snake.segments[1:]:
+        # if segment == snake.head:
+        #     pass
+          if snake.head.distance(segment) < 10:
             game_is_on = False
             score.gameOverText()
 
