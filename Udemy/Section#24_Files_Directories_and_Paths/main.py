@@ -23,9 +23,6 @@ print(contents)
 with open("my_new_file.txt", mode="a") as file:
     file.write("\nNew text3.")
 
-with open("test.txt", mode="r") as testfile:
-    i = int(testfile.read())
-    print(i)
 
 
 
