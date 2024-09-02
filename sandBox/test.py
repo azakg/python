@@ -86,11 +86,27 @@
 
 #________________________________________________________________________________
 
-import sys
+# import sys
+#
+# for line in sys.stdin:
+# 	if 'q' == line.rstrip():
+# 		break
+# 	print(f'Input : {line}')
+#
+# print("Exit")
+#______________________________________________________________________________________________________
+import random
 
-for line in sys.stdin:
-	if 'q' == line.rstrip():
-		break
-	print(f'Input : {line}')
+def randomizer(sides):
+	return random.randint(0, sides)
+i = input()
+dices = i.split()
+new_dices = []
+for n in dices:
+	new_dices.append(int(n))
 
-print("Exit")
+sum_dics = 0
+
+for n in range(new_dices[1]):
+	sum_dics += randomizer(new_dices[0])
+print(sum_dics)
