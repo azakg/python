@@ -1,0 +1,3 @@
+rewrite text2
+append text2
+append text3
