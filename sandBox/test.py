@@ -95,18 +95,102 @@
 #
 # print("Exit")
 #______________________________________________________________________________________________________
+# import random
+#
+# def randomizer(sides):
+# 	return random.randint(0, sides)
+# i = input()
+# dices = i.split()
+# new_dices = []
+# for n in dices:
+# 	new_dices.append(int(n))
+#
+# sum_dics = 0
+#
+# for n in range(new_dices[1]):
+# 	sum_dics += randomizer(new_dices[0])
+# print(sum_dics)
+
+#________________________________________________________________________________________________________________
+#
+# list1 = []
+# for _ in range(3):
+#     list1.append(int(input()))
+# minimum = min(list1)
+# if minimum == list1[0]:
+#     print("Monnei")
+# elif minimum == list1[1]:
+#     print("Fjee")
+# else:
+#     print(" Dolladollabilljoll")
+#__________________________________________________________________________________________________________________
+# first = int(input())
+# second = int(input())
+# multi_list = [[(x+1)+(y+1) for x in range(first)] for y in range(second)]
+# max_value = first+second
+# dic_list = {}
+# count = 1
+# for x in range(second):
+# 	for y in range(first):
+# 		if multi_list[x][y] not in dic_list:
+# 			dic_list[f"{multi_list[x][y]}"] = 0
+#
+# for x in range(second):
+# 	for y in range(first):
+# 		for key, value in dic_list.items():
+# 			if multi_list[x][y] == int(key):
+# 				dic_list[key] += 1
+#
+# # list1 = [v for k, v in dic_list.items() if v == max(dic_list, key=dic_list.get)]
+# print(dic_list)
+# print(max(dic_list, key=dic_list.get))
+# for n in
+#______________________________________________________________________________________________________________
+
+# text = input()
+# new_str = ""
+# for n in text:
+#     if n.isupper():
+#         new_str = new_str + n
+#     else:
+#         pass
+# print(new_str)
+#________________________________________________________________________________________________________________
+# line = input().replace(" ", '')
+# x = 1
+# for n in line:
+#     x = x * int(n)
+# print(x)
+#_______________________________________________________________________________________________________________________
+
+# dic = {"one": 0}
+# ch = "one"
+# dic[ch] += 1
+# print(dic[ch])
+#________________________________________________________________________________________________________________________#
+# amount = int(input())
+# lines = -1
+# total = 0
+# for _ in range(amount):
+#     lines +=1
+#     total +=int(input())
+#
+# print(total - lines)
+
+#_________________________________________________________________________________________________________
+# word = input()
+# printed_word = ""
+# for _ in range(3):
+#     printed_word += f" {word}"
+# print(printed_word)
+#____________________________________________________________________________________
+# input_seq = input().split()
+# print(int(input_seq[0])+int(input_seq[1]))
+
 import random
+import string
 
-def randomizer(sides):
-	return random.randint(0, sides)
-i = input()
-dices = i.split()
-new_dices = []
-for n in dices:
-	new_dices.append(int(n))
-
-sum_dics = 0
-
-for n in range(new_dices[1]):
-	sum_dics += randomizer(new_dices[0])
-print(sum_dics)
+#symbol = ''.join(random.choices(string.ascii_letters, k=7))
+symbol = random.choices(string.ascii_letters, k=7)
+#  res = ''.join(random.choices(string.ascii_letters, k=7))
+print(str(symbol))
