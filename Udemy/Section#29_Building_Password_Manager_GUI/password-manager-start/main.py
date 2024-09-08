@@ -1,17 +1,27 @@
 import string
 from tkinter import *
 import random
+from tkinter import messagebox
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generator():
-    #symbol = ''.join(random.choices(string.ascii_letters, k=7))
-    # return symbol
     password_entry.insert(0, ''.join(random.choices(string.ascii_letters, k=7)))
 
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-def get_entry():
-    with open("data.txt", "a") as file:
-        file.write(f"\n{website_entry.get()} | {email_entry.get()} | {password_entry.get()} ")
+def save():
+    website = website_entry.get()
+    email = email_entry.get()
+    password = password_entry.get()
+    if len(website) == 0 or len(password) == 0:
+        messagebox.showinfo(title="Oops", message="Please make sure you haven't left any field empty!")
+    else:
+        is_ok = messagebox.askokcancel(title=website, message=f"These are the detail entered: \nWebsite: {website} \nEmail: {email}"
+                                                      f" \nPassword: {password} \n Is it Ok to save?")
+    if is_ok:
+        with open("data.txt", "a") as data_file:
+            data_file.write(f"{website} | {email} | {password}\n")
+            website_entry.delete(0, END)
+            password_entry.delete(0, END)
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -53,7 +63,7 @@ password_entry.grid(row=3, column=1)
 generate_password_button = Button(text="Generate Password", command=generator)
 generate_password_button.grid(row=3, column=2)
 
-add_button = Button(text="Add", width=36, command=get_entry)
+add_button = Button(text="Add", width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
 
 window.mainloop()
