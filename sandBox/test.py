@@ -187,10 +187,15 @@
 # input_seq = input().split()
 # print(int(input_seq[0])+int(input_seq[1]))
 
-import random
-import string
-
-#symbol = ''.join(random.choices(string.ascii_letters, k=7))
-symbol = random.choices(string.ascii_letters, k=7)
-#  res = ''.join(random.choices(string.ascii_letters, k=7))
-print(str(symbol))
+#_________________________________________________________________________________________________________
+# import random
+# import string
+#
+# #symbol = ''.join(random.choices(string.ascii_letters, k=7))
+# symbol = random.choices(string.ascii_letters, k=7)
+# #  res = ''.join(random.choices(string.ascii_letters, k=7))
+# print(str(symbol))
+#_________________________________________________________________________________________________________
+import pyperclip
+pyperclip.copy("Example Text")
+pyperclip.past()
