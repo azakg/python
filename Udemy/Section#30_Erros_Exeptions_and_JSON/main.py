@@ -8,7 +8,7 @@ except:
 else:
     Do this if there were no exceptions
 finally:
-    Dp this no matter what happens
+    Do this no matter what happens
 """
 
 # #FileNotFoundError

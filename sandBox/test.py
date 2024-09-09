@@ -196,6 +196,11 @@
 # #  res = ''.join(random.choices(string.ascii_letters, k=7))
 # print(str(symbol))
 #_________________________________________________________________________________________________________
-import pyperclip
-pyperclip.copy("Example Text")
-pyperclip.past()
+# import pyperclip
+# pyperclip.copy("Example Text")
+# pyperclip.past()
+
+#_________________________________________________________________________________________________________
+
+with open("file.txt", "w") as file:
+    file.write("some text")
