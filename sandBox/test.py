@@ -201,6 +201,18 @@
 # pyperclip.past()
 
 #_________________________________________________________________________________________________________
+#
+# with open("file.txt", "w") as file:
+#     file.write("some text")
 
-with open("file.txt", "w") as file:
-    file.write("some text")
+from tkinter import *
+
+
+window = Tk()
+window.title("Example")
+window.config(padx=50, pady=50, bg="green")
+
+canvas = Canvas(width=800)
+
+
+window.mainloop()
