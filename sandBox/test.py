@@ -205,14 +205,305 @@
 # with open("file.txt", "w") as file:
 #     file.write("some text")
 
-from tkinter import *
+# from tkinter import *
+#
+#
+# window = Tk()
+# window.title("Example")
+# window.config(padx=50, pady=50, bg="green")
+#
+# canvas = Canvas(width=800)
+#
+#
+# window.mainloop()
+# #_________________________________________________________________________________________________________
+# str1 = input()
+# #print(len(str1))
+# counter = 0
+# new_str = ""
+# go_on = True
+# while go_on:
+#     for i in str1:
+#         if i =="a" and go_on:
+#             for x in range(counter, 100):
+#                 #print(f"{x}:{len(str1)}")
+#                 if x >= len(str1):
+#                     go_on = False
+#                 else:
+#                     new_str += str1[x]
+#         counter += 1
+#     else:
+#         pass
+# print(new_str)
 
 
-window = Tk()
-window.title("Example")
-window.config(padx=50, pady=50, bg="green")
+# _________________________________________________________________________________________________________
 
-canvas = Canvas(width=800)
+# str1 = input()
+#
+# new_index = str1.find("a")
+# print(new_index)
+# print(str1[new_index:])
+# _________________________________________________________________________________________________________
+
+# text_str = 'https://nostarch.com'
+# new_text_str = text_str.removeprefix("https://")
+# print(new_text_str)
+
+# _________________________________________________________________________________________________________
+#
+# fig_list = input().split()
+# init_list = [1, 1, 2, 2, 2, 8]
+# final_list = []
+#
+# for x in range(6):
+#     if int(fig_list[x]) > init_list[x]:
+#         final_list.append(-abs(int(fig_list[x]) - init_list[x]))
+#     elif int(fig_list[x]) == init_list[x]:
+#         final_list.append(0)
+#     else:
+#        final_list.append(init_list[x]-int(fig_list[x]))
+# print(' '.join(str(e) for e in final_list))
+
+# _________________________________________________________________________________________________________
+
+# two_nums = input().split()
+# if int(two_nums[0]) > int(two_nums[1]):
+#     print(1)
+# else:
+#     print(0)
+
+# _________________________________________________________________________________________________________
+
+# email = input()
+# print(email.replace(" ", ""))
+# _________________________________________________________________________________________________________
+# input_str = input()
+# counter = 0
+# for x in input_str:
+#     if ord(x) in range(65, 91) or ord(x) in range(97, 123):
+#         counter += 1
+#     else:
+#         pass
+# print(counter)
+# _________________________________________________________________________________________________________
+# bin_num = bin(int(input()))
+# reversed = [ x for x in bin_num[:1:-1]]
+# unit = ''.join(reversed)
+# print(int(unit,2))
+# _________________________________________________________________________________________________________
+# line1 = input().split()
+# print((int(line1[1])*2)-int(line1[0]))
+
+# _________________________________________________________________________________________________________
+# iter = int(input())
+# for _ in range(iter):
+#     input_ints = [int(x) for x in input().split()]
+#     if input_ints[1]-input_ints[2] > input_ints[0]:
+#         print("advertise")
+#     elif input_ints[1] - input_ints[2] == input_ints[0]:
+#         print("does not matter")
+#     else:
+#         print("do not advertise")
+# _________________________________________________________________________________________________________
+# list1 = input()
+# if "OCT 31" == list1 or "DEC 25" == list1:
+#     print("yup")
+# else:
+#     print("nope")
+# _________________________________________________________________________________________________________
+# iter1 = int(input())
+# default = 0
+# incre = 0
+# for x in range(iter1):
+#     list1 = input().split()
+#     for n in range(int(list1[1])):
+#         default +=1
+#         incre += n+1
+#     print(f"{x+1} {default+incre}")
+#     default = 0
+#     incre = 0
+# _________________________________________________________________________________________________________
+
+# import math
+# iter1 = int(input())
+# for _ in range(iter1):
+#     n = int(input())
+#     print(math.factorial(n)%10)
+# _________________________________________________________________________________________________________
+
+# greating = input()
+# counter = 0
+# for x in greating:
+#     if x == "e":
+#         counter +=1
+# list1 = ['e' for _ in range(counter*2)]
+# print(f"h{''.join(list1)}y")
+# _________________________________________________________________________________________________________
+# phone_n = input()
+# if phone_n[:3] == "555":
+#     print(1)
+# else:
+#     print(0)
+
+# _________________________________________________________________________________________________________
+# two_ints = input().split()
+# p_n = int(two_ints[0]) + int(two_ints[1])
+# print(p_n)
+# _________________________________________________________________________________________________________
+# first_input = input().split()
+# go_on = True
+# while go_on:
+#     first_input = input().split()
+#     second_input = input().split()
+#     if first_input[0] == "0":
+#         go_on = False
+#     if int(first_input[0]) ==
+#
+#
+# """
+# 1 + 2
+# length + width + 3 + depth
+# length = 3
+# length + width + 3 + depth
+# width = 7
+# length + width + 3 + depth
+# depth = 2
+# length + width + 3 + depth
+# depth = 1
+# length + width + 3 + depth
+# computercost + televisioncost
+# 0
+# """
+# _________________________________________________________________________________________________________
+# input_s = list(map(int, input().split()))
+# input_s.sort()
+# print(*input_s)
 
 
-window.mainloop()
+# _________________________________________________________________________________________________________
+# iter_n = int(input())
+# list_of_int = list(map(int, input().split()))
+# print(sum(list_of_int))
+# _________________________________________________________________________________________________________
+# list_of_int = list(map(int, input().split()))
+# result = (list_of_int[0] * list_of_int[1])*0.5
+# print(result)
+# _________________________________________________________________________________________________________
+# a, b, c = map(int, input().split())
+# if a + b == c:
+#     print("correct!")
+# else:
+#     print("wrong!")
+
+# _________________________________________________________________________________________________________
+# nothing = int(input())
+# list_of_int = list(map(int, input().split()))
+# print(f"{int(sum(list_of_int)/nothing)}")
+
+# _________________________________________________________________________________________________________
+# without_y = "aeiouAEIOU"
+# with_y = "aeiouyAEIOUY"
+# counter_y = 0
+# counter = 0
+# input_str = input()
+# for l in input_str:
+#     if l in without_y:
+#         counter +=1
+#     else:
+#         counter_y +=1
+# print(f"{counter} {counter_y}")
+
+# _________________________________________________________________________________________________________
+# iter1 = int(input())
+# list1 = []
+# for _ in range(iter1):
+#     list1.append(input())
+#
+# for x in range(len(list1)):
+#     if x%2 == 0:
+#         print(list1[x])
+# _________________________________________________________________________________________________________
+# iter1 = int(input())
+# items_list = ["keys", "phone", "wallet"]
+# new_items_list = []
+# print_list = []
+# for _ in range(iter1):
+#     new_items_list.append(input())
+#
+# for x in items_list:
+#     if x in new_items_list:
+#         pass
+#     else:
+#         print_list.append(x)
+# if len(print_list) == 0:
+#     print('ready')
+# else:
+#     for x in print_list:
+#         print(x)
+# _________________________________________________________________________________________________________
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        # for x in range(len(nums)):
+        #     if val == nums[x]:
+        #         nums.pop(x)
+        #         nums.append("_")
+        # print(f"{len(nums)}, nums = {nums}")
+        # return len(nums)
+        k = 0
+#         for i in range(len(nums)):
+#             if (nums[i] != val):
+#                 nums[k] = nums[i]
+#                 k += 1
+#         return k
+# obj = Solution()
+# obj.removeElement([3,2,2,3], 3)
+# _________________________________________________________________________________________________________
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        initial_str = strs[0]
+        for x in strs:
+            while not x.startswith(initial_str):
+                initial_str = initial_str[:-1]
+        if initial_str == "":
+            print("There is no common prefix among the input")
+        else:
+            print(initial_str)
+strs = ["flower","flow","flight"]
+strs1 = ["dog","racecar","car"]
+obj = Solution()
+obj.longestCommonPrefix(strs)
+
+print(Solution.longestCommonPrefix(strs))
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
+
+# _________________________________________________________________________________________________________
