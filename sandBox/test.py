@@ -442,20 +442,20 @@
 #     for x in print_list:
 #         print(x)
 # _________________________________________________________________________________________________________
-class Solution(object):
-    def removeElement(self, nums, val):
-        """
-        :type nums: List[int]
-        :type val: int
-        :rtype: int
-        """
+# class Solution(object):
+#     def removeElement(self, nums, val):
+#         """
+#         :type nums: List[int]
+#         :type val: int
+#         :rtype: int
+#         """
         # for x in range(len(nums)):
         #     if val == nums[x]:
         #         nums.pop(x)
         #         nums.append("_")
         # print(f"{len(nums)}, nums = {nums}")
         # return len(nums)
-        k = 0
+        # k = 0
 #         for i in range(len(nums)):
 #             if (nums[i] != val):
 #                 nums[k] = nums[i]
@@ -464,31 +464,97 @@ class Solution(object):
 # obj = Solution()
 # obj.removeElement([3,2,2,3], 3)
 # _________________________________________________________________________________________________________
-class Solution(object):
-    def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
-        initial_str = strs[0]
-        for x in strs:
-            while not x.startswith(initial_str):
-                initial_str = initial_str[:-1]
-        if initial_str == "":
-            print("There is no common prefix among the input")
-        else:
-            print(initial_str)
-strs = ["flower","flow","flight"]
-strs1 = ["dog","racecar","car"]
-obj = Solution()
-obj.longestCommonPrefix(strs)
-
-print(Solution.longestCommonPrefix(strs))
+# class Solution(object):
+#     def longestCommonPrefix(self, strs):
+#         """
+#         :type strs: List[str]
+#         :rtype: str
+#         """
+#         initial_str = strs[0]
+#         for x in strs:
+#             while not x.startswith(initial_str):
+#                 initial_str = initial_str[:-1]
+#         if initial_str == "":
+#             print("There is no common prefix among the input")
+#         else:
+#             print(initial_str)
+# strs = ["flower","flow","flight"]
+# strs1 = ["dog","racecar","car"]
+# obj = Solution()
+# obj.longestCommonPrefix(strs)
+#
+# print(Solution.longestCommonPrefix(strs))
 # _________________________________________________________________________________________________________
+# diff = int(input())
+# WM = input()
+# WM_dic ={}
+# for x in WM:
+#     WM_dic[x]=0
+# result_num = 0
+#
+# for i in WM:
+#     if abs(WM_dic["W"] - WM_dic["M"]) > diff:
+#         if i == "W":
+#             WM_dic[i] -=1
+#             result_num +=1
+#         elif i == "M":
+#             WM_dic[i] -=1
+#             result_num +=1
+# print(result_num)
+# for i in WM:
+#     if abs(WM_dic["W"] - WM_dic["M"]) <= diff:
+#         if i == "W":
+#             WM_dic[i] +=1
+#             result_num +=1
+#         elif i == "M":
+#             WM_dic[i] +=1
+#             result_num +=1
+# print(result_num)
+# go_on = True
+# result_num = len(WM)
+# while go_on:
+#     if abs(WM_dic["W"] - WM_dic["M"]) > diff:
+#         result_num -=1
+#     else:
+#         print(result_num)
+#         go_on = False
+
+# sub_result = abs(WM_dic["W"] - WM_dic["M"])
+#
+# if sub_result == 0:
+#     print(WM_dic["W"])
+# else:
+#     print(len(WM) - sub_result)
 
 # _________________________________________________________________________________________________________
-
+# num1 = int(input())
+# line1 = [x for x in input()]
+# num_of_M = 0
+# num_of_W = 0
+# for x in line1:
+#     if x == "M":
+#         num_of_M +=1
+#     else:
+#         num_of_W +=1
+# go_on =True
+# new_line = []
+# i = 0
+# while go_on:
+#     new_line.append(line1[i])
+#     if
 # _________________________________________________________________________________________________________
+list1 = [2,3,4]
+list2 = [5,6,4]
+list1R = int(''.join([str(i) for i in list1[::-1]]))
+list2R = int(''.join([str(i) for i in list2[::-1]]))
+
+
+
+
+
+
+
+
 
 # _________________________________________________________________________________________________________
 

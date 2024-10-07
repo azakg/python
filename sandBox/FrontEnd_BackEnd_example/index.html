@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front-End and Back-End Example</title>
+</head>
+<body>
+  <h1>Enter Your Name</h1>
+  <input type="text" id="nameInput" placeholder="Enter your name" />
+  <button onclick="sendName()">Submit</button>
+
+  <h2 id="greetingMessage"></h2>
+
+  <script>
+    function sendName() {
+      const name = document.getElementById("nameInput").value;
+
+      // Send the name to the backend using fetch
+      fetch("http://127.0.0.1:5000/greet", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name: name }) // Sending name as JSON data
+      })
+      .then(response => response.json()) // Wait for the backend to respond
+      .then(data => {
+        // Display the message from backend
+        document.getElementById("greetingMessage").innerText = data.message;
+      })
+      .catch(error => console.error("Error:", error));
+    }
+  </script>
+</body>
+</html>
