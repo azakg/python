@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattew's Pizza</title>
+    <style>
+        body {
+            background-color: #202f2e;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #restaurant_name {
+            text-align: center;
+            color: white;
+            font-family: "Italianno", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 800%;
+            margin: 20px 0;
+        }
+
+        #second_text {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: "Italianno", cursive;
+            font-weight: 400;
+            font-size: 300%;
+            z-index: 2;
+        }
+
+        #link {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            color: white;
+            font-size: 150%;
+            text-decoration: none;
+            z-index: 3;
+        }
+        #admin_link {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            color: white;
+            font-size: 150%;
+            text-decoration: none;
+            z-index: 3;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .image {
+            width: 30%;
+            height: auto;
+            border-radius: 200px 200px 0 0;
+        }
+
+        .content {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-color: #0b1111;
+        }
+
+        /* Feedback Section Layout */
+        .feedback-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            color: white;
+        }
+
+        .feedback-form {
+            background-color: #0b1111;
+            color: white;
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .feedback-form input, .feedback-form textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .feedback-form input[type="submit"] {
+            background-color: #ff4500;
+            color: white;
+            cursor: pointer;
+            font-size: 120%;
+        }
+
+        .feedback-form input[type="submit"]:hover {
+            background-color: #e63e00;
+        }
+
+        /* Previous Feedback Section */
+        .previous-feedback {
+            background-color: #0b1111;
+            width: 45%;
+            padding: 20px;
+            color: white;
+            overflow-y: auto;
+            max-height: 400px;
+            border-radius: 5px;
+        }
+
+        .previous-feedback h2 {
+            text-align: center;
+        }
+
+        .feedback-item {
+            background-color: #1c2a2a;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .feedback-item p {
+            margin: 5px 0;
+        }
+
+        .feedback-item .name {
+            font-weight: bold;
+            color: #ff4500;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="restaurant_name">Amici's Pizza</h1>
+    <h3 id="second_text">Best Italian Pizza in Cleveland</h3>
+    <a id="link" href="https://google.com">RESTAURANT</a>
+    <a id="admin_link" href="admin.html">Admin</a>
+
+    <div class="image-container">
+        <img src="left.jpg" id="imageL" class="image" alt="Left Image of Pizza">
+        <img src="center.jpg" id="imageC" class="image" alt="Center Image of Pizza">
+        <img src="right.jpg" id="imageR" class="image" alt="Right Image of Pizza">
+    </div>
+
+    <div class="content">
+        <h2>Welcome to Mattew's Pizza!</h2>
+    </div>
+
+    <div class="content">
+        <h2>Location & Hours</h2>
+        <p>We are located at 1800 Turner Street, Cleveland City, USA.</p>
+        <p>Open Monday through Sunday, 11 AM - 11 PM.</p>
+    </div>
+
+    <!-- Feedback Section with Two Columns -->
+    <div class="feedback-section">
+        <!-- Left: Leave Feedback Form -->
+        <div class="feedback-form">
+            <h2>Leave Your Feedback</h2>
+            <form action="/submit_feedback" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="feedback" rows="5" placeholder="Your Feedback" required></textarea>
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </div>
+
+        <!-- Right: Previous Feedback Display -->
+        <div class="previous-feedback">
+            <h2>Previous Feedback</h2>
+            <!-- Flask will populate this section -->
+            {% for feedback in feedback %}
+            <div class="feedback-item">
+                <p class="name">{{ feedback.name }}</p>
+                <p>"{{ feedback.feedback }}"</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
