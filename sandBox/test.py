@@ -204,3 +204,5 @@
 
 with open("file.txt", "w") as file:
     file.write("some text")
+
+print("Test")
