@@ -12,3 +12,17 @@ class Circle:
     #     self.radius  = radius
 
 
+class Circle1:
+    def __init__(self, raduis, color):
+        self.radius = raduis
+        self.color = color
+
+    def getRadius(self):
+        return self.radius
+    def setRadius(self, newRadius):
+        self.radius = newRadius
+    def getColor(self):
+        return self.color
+    def setColor(self, newColor):
+        self.color = newColor
+

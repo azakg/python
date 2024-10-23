@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amici's Pizza</title>
+    <title>Mattew's Pizza</title>
     <style>
         body {
             background-color: #202f2e;
@@ -143,10 +143,10 @@
     </style>
 </head>
 <body>
-    <h1 id="restaurant_name">Amici's Pizza</h1>
+    <h1 id="restaurant_name">Mattew's Pizza</h1>
     <h3 id="second_text">Best Italian Pizza in Cleveland</h3>
     <a id="link" href="https://google.com">RESTAURANT</a>
-    <a id="admin_link" href="admin.html">Admin</a>
+    <a id="admin_link" href="templates/authentication.html">Admin</a>
 
     <div class="image-container">
         <img src="left.jpg" id="imageL" class="image" alt="Left Image of Pizza">
@@ -169,7 +169,7 @@
         <!-- Left: Leave Feedback Form -->
         <div class="feedback-form">
             <h2>Leave Your Feedback</h2>
-            <form action="/submit_feedback" method="post">
+            <form action="http://127.0.0.1:5000/ECC521_sand_box/submit_feedback" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <textarea name="feedback" rows="5" placeholder="Your Feedback" required></textarea>
                 <input type="submit" value="Submit Feedback">

@@ -30,30 +30,25 @@
         <input type="text" id="expression" placeholder="Enter calculation (e.g., 1 + 1)">
         <button onclick="calculate()">Calculate</button>
         <p id="result"></p>
+
     </div>
 
     <script>
         function calculate() {
             const expression = document.getElementById('expression').value;
-            console.log("Expression to evaluate:", expression);  // Debugging log
 
-            fetch('http://127.0.0.1:5000/calculate', {  // Use 127.0.0.1 instead of localhost
+            fetch('http://127.0.0.1:5000/calculate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ expression: expression })
             })
-            .then(response => {
-                console.log("Response received:", response);
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                console.log("Data from server:", data);
                 document.getElementById('result').innerText = 'Result: ' + data.result;
             })
             .catch(error => {
-                console.error('Error:', error);
                 document.getElementById('result').innerText = 'Error: ' + error;
             });
         }

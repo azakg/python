@@ -1,4 +1,4 @@
-from Circle import Circle
+from Circle import Circle, Circle1
 
 def main():
     circle1 = Circle()

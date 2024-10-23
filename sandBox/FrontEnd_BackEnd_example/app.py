@@ -1,18 +1,22 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route('/greet', methods=['POST'])
-def greet():
-    data = request.get_json()  # Get the JSON data sent by the front-end
-    name = data.get('name')  # Extract the 'name' value
-    message = f"Hello, {name}! Welcome to our website!"  # Create the greeting message
+@app.route('/sandBox/FrontEnd_BackEnd_example/submit', methods=['POST'])
+def submit():
+    text_input = request.form.get('textInput')
+    # Проверка, что текст был получен
+    if text_input:
+        print("Success")
+        print(f"Received text: {text_input}")
+    else:
+        print("No text received")
 
-    return jsonify({"message": message})  # Return the message as JSON response
-
+    return f"Text received: {text_input}"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+   app.run(port=5000, debug=True)
