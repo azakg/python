@@ -25,3 +25,6 @@ name = soup.select_one(selector="#name")
 print(name)
 name1 = soup.select_one(selector="#name1")
 print(name1)
+
+headings = soup.select(selector=".heading")
+print(headings)
