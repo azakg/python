@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Header Text</h1>
+    <form id="dataForm">
+        <lable for="name">Name:</lable>
+        <input type="text" id="name" placeholder="Azamat:" required>
+        <button type="submit">Send Data</button>
+    </form>
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', async function(event) {
+            event.preventDefault();  // Prevent form from reloading the page
+
+            // Get input values
+            const name = document.getElementById('name').value;
+    
+            // Data to be sent to the backend
+            const data = {
+                name: name,
+            };
+        }
+    </script>
+</body>
+</html>

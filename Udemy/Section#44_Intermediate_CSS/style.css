@@ -1,0 +1,38 @@
+/* Стили для контейнера */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1200x800');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Стили для блока */
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  
+  /* Стили для кнопки */
+  .animated-button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .animated-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+  

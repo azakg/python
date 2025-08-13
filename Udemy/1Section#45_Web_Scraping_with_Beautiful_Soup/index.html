@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Data to Backend</title>
+</head>
+<body>
+
+    <h1>Send Data to Python Backend</h1>
+
+    <!-- Form for user input -->
+    <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit">Send Data</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('dataForm').addEventListener('submit', async function(event) {
+            event.preventDefault();  // Prevent form from reloading the page
+
+            // Get input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Data to be sent to the backend
+            const data = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Send data to the backend
+            try {
+                const response = await fetch('http://localhost:5001/api/send-data', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    document.getElementById('response').textContent =
+                        'Data sent successfully: ' + JSON.stringify(result);
+                } else {
+                    document.getElementById('response').textContent =
+                        'Failed to send data: ' + response.statusText;
+                }
+            } catch (error) {
+                document.getElementById('response').textContent = 'Error: ' + error;
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattew's Pizza</title>
+    <style>
+        body {
+            background-color: #202f2e;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #restaurant_name {
+            text-align: center;
+            color: white;
+            font-family: "Italianno", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 800%;
+            margin: 20px 0;
+        }
+        #second_text {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: "Italianno", cursive;
+            font-weight: 400;
+            font-size: 300%;
+            z-index: 2;
+        }
+        #link {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            color: white;
+            /*font-family: "Italianno", cursive;*/
+            font-size: 150%;
+            text-decoration: none;
+            z-index: 3;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .image {
+            width: 30%;
+            height: auto;
+            border-radius: 200px 200px 0 0;
+        }
+
+        .content {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-color: #0b1111;
+        }
+        .feedback{
+
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="restaurant_name">Mattew's Pizza</h1>
+    <h3 id="second_text">Best Italian Pizza in Cleveland</h3>
+    <a id="link" href="https://google.com">RESTAURANT</a>
+
+
+    <div class="image-container">
+        <img src="left.jpg" id="imageL" class="image" alt="Left Image">
+        <img src="center.jpg" id="imageC" class="image" alt="Center Image">
+        <img src="right.jpg" id="imageR" class="image" alt="Right Image">
+    </div>
+
+
+    <div class="content">
+        <h2>Welcome to Mattew's Pizza!</h2>
+    </div>
+    <div class="feedback">
+
+    </div>
+
+    <div class="content">
+        <h2>Location & Hours</h2>
+        <p>We are located at 1800 Turner Street, Cleveland City, USA.</p>
+        <p>Open Monday through Sunday, 11 AM - 11 PM.</p>
+    </div>
+</body>
+</html>

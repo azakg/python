@@ -673,24 +673,133 @@
 # for f in right_list:
 #     if
 # _________________________________________________________________________________________________________
+# num_str = input()
+# list1 = []
+#
+# for x in num_str[::-1]:
+#     list1.append(x)
+# print("".join(list1))
+# _________________________________________________________________________________________________________
+# input_float = float(input())
+# print(round(input_float))
+# _________________________________________________________________________________________________________
+# times = int(input())
+# for _ in range(times):
+#     input_num = int(input())
+#     if input_num%2 == 0:
+#         print(f"{input_num} is even")
+#     else:
+#         print(f"{input_num} is odd")
+# _________________________________________________________________________________________________________
+# iter_num = int(input())
+# list1 = []
+# for _ in range(iter_num):
+#     iter_num2 = int(input())
+#     for _ in range(iter_num2):
+#         list1.append(input())
+#
+#     list2 = list(dict.fromkeys(list1))
+#     print(len(list2))
+#     list2.clear()
+#     list1.clear()
+# _________________________________________________________________________________________________________
+# input_str = input()
+# T = 0
+# C = 0
+# G = 0
+# for x in input_str:
+#     if x == "T":
+#         T +=1
+#     elif x == "C":
+#         C +=1
+#     elif x == "G":
+#         G +=1
+#     else:
+#         pass
+# print(pow(T, 2) + pow(C, 2) + pow(G, 2) + 7)
+# # print(T + G + C)
+# # print(T)
+# # print(G)
+# # print(C)
 
 # _________________________________________________________________________________________________________
+# input_str = input()
+# list1 = [0,0,0]
+# for x in input_str:
+#     if x == "T":
+#         list1[0] = list1[0] + 1
+#     elif x == "C":
+#         list1[1] = list1[1] + 1
+#     elif x == "G":
+#         list1[2] = list1[2] + 1
+# print(pow(list1[0],2)+pow(list1[1],2)+pow(list1[2],2)+(7*min(list1)))
+# _________________________________________________________________________________________________________
+# first_loop = int(input())
+#
+# list1 = []
+# list2 = []
+# for _ in range(first_loop):
+#     second_loop = int(input())
+#     for _ in range(second_loop):
+#         new_str = input().split()
+#         if new_str[1] not in list1:
+#             list1.append(new_str[1])
+#         else:
+#             pass
+#         if new_str[0] not in list2:
+#             list2.append(new_str[0])
+#         else:
+#             pass
+#     if len(list1) > 1:
+#         print(len(list1) * len(list2) -1)
+#     else:
+#         print(len(list2))
+#     list1.clear()
+#     list2.clear()
 
 # _________________________________________________________________________________________________________
+# iter = int(input())
+# parking_num1 = []
+# parking_num2 = []
+# parking_num3 = []
+# max1 = 0
+# min1 = 0
+# for _ in range(iter):
+#     x = int(input())
+#     parking_num1 = input().split()
+#     parking_num2 = map(int, parking_num1)
+#     for a in parking_num2:
+#         parking_num3.append(a)
+#     print(int(((max(parking_num3)-min(parking_num3))/2)*x))
+
 
 # _________________________________________________________________________________________________________
+# input_str = input()
+# space = 0
+# Capital = 0
+# Lower = 0
+# Sing = 0
+#
+# for c in input_str:
+#     tmp = ord(c)
+#     if tmp == 95:
+#         space +=1
+#     elif tmp in range(65,91):
+#         Capital +=1
+#     elif tmp in range(97,123):
+#         Lower +=1
+#     elif tmp in range(33,48) or range(58,65) or range(91,97) or range(123,127):
+#         Sing +=1
+# print(space/(space+Capital+Lower+Sing))
+# print(Lower/(space+Capital+Lower+Sing))
+# print(Capital/(space+Capital+Lower+Sing))
+# print(Sing/(space+Capital+Lower+Sing))
+#___________________________________________________________________________________________
 
-# _________________________________________________________________________________________________________
+n = 2.71
+r = round(n)
+print(r)
 
-# _________________________________________________________________________________________________________
-
-# _________________________________________________________________________________________________________
-
-# _________________________________________________________________________________________________________
-
-# _________________________________________________________________________________________________________
-
-# _________________________________________________________________________________________________________
 
 # _________________________________________________________________________________________________________
 
